@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mapa Predio</title>
+
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Fullscreen Map Container -->
+    <div id="map"></div>
+
+    <!-- UI Overlay -->
+    <div class="ui-container">
+        <div class="search-panel">
+            <div class="search-header">
+                <span class="material-icons menu-icon">menu</span>
+                <input type="text" placeholder="Buscar destino en el predio..." id="search-input" readonly>
+                <img src="img/logo.png" class="logo-small" alt="Logo" onerror="this.style.display='none'">
+            </div>
+
+            <div class="destinations-list" id="destinations-list">
+                <div class="destination-item" onclick="mostrarInfoLugar('banos')">
+                    <span class="material-icons">wc</span>
+                    <div class="dest-info"><span>Baños</span><small>Sanitarios públicos</small></div>
+                </div>
+                <div class="destination-item" onclick="mostrarInfoLugar('aulas')">
+                    <span class="material-icons">school</span>
+                    <div class="dest-info"><span>Aulas</span><small>Sector principal</small></div>
+                </div>
+                <div class="destination-item" onclick="mostrarInfoLugar('aulas3')">
+                    <span class="material-icons">menu_book</span>
+                    <div class="dest-info"><span>Aulas 3</span><small>Tercer sector</small></div>
+                </div>
+                <div class="destination-item" onclick="mostrarInfoLugar('seguridad')">
+                    <span class="material-icons">security</span>
+                    <div class="dest-info"><span>Seguridad</span><small>Puesto de control</small></div>
+                </div>
+                <div class="destination-item" onclick="mostrarInfoLugar('secretaria')">
+                    <span class="material-icons">support_agent</span>
+                    <div class="dest-info"><span>Secretaría</span><small>Atención al alumno</small></div>
+                </div>
+                <div class="destination-item" onclick="mostrarInfoLugar('kiosco')">
+                    <span class="material-icons">storefront</span>
+                    <div class="dest-info"><span>Kiosco</span><small>Buffet y compras</small></div>
+                </div>
+                <div class="destination-item" onclick="mostrarInfoLugar('laboratorio')">
+                    <span class="material-icons">science</span>
+                    <div class="dest-info"><span>Laboratorio</span><small>Prácticas y ciencias</small></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de información del lugar y ruta -->
+        <div id="place-info-panel" class="place-info-panel" style="display: none;">
+            <div class="place-image-container">
+                <img id="place-image" src="" alt="Lugar">
+                <button class="carousel-btn prev-btn" id="carousel-prev" onclick="cambiarImagen(-1)">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button class="carousel-btn next-btn" id="carousel-next" onclick="cambiarImagen(1)">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+                <div class="carousel-dots" id="carousel-dots"></div>
+                <button class="close-place" onclick="cerrarInfoLugar()">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <div class="place-content">
+                <h2 id="place-title">Título</h2>
+                <p id="place-desc">Descripción del lugar.</p>
+
+                <div class="route-details-inline" id="route-details-inline" style="display: none;">
+                    <span class="material-icons route-icon">directions_walk</span>
+                    <div class="route-stats">
+                        <span class="route-time" id="tiempo-valor">-- min</span>
+                        <span class="route-distance" id="distancia-valor">(-- m)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Creador de rutas flotante (oculto por defecto) -->
+    <button class="fab-creator" id="btn-toggle-creator" onclick="toggleModoCreador()" title="Modo Creador">
+        <span class="material-icons">edit_location_alt</span>
+    </button>
+    <div class="creator-panel" id="creator-panel" style="display: none;">
+        <h3>Modo Creador</h3>
+        <button class="btn-clear" onclick="limpiarTrazado()">Limpiar</button>
+        <textarea id="output-coordenadas" rows="3" placeholder="Coordenadas..."></textarea>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
