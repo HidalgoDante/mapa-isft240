@@ -40,7 +40,7 @@ html, body {
     pointer-events: auto;
 }
 .place-image-container {
-        height: 120px; /* Reducido para pantallas pequeñas */
+        height: 80px; /* Reducido para pantallas pequeñas */
 }
 }
 
