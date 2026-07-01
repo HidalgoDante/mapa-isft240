@@ -39,10 +39,6 @@ html, body {
 .search-panel, .route-info-card, .fab-creator, .creator-panel {
     pointer-events: auto;
 }
-.place-image-container {
-        height: 80px; /* Reducido para pantallas pequeñas */
-}
-}
 
 .search-panel {
     background: white;
@@ -349,7 +345,7 @@ html, body {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    width: 300px;
+    width: 380px;
     max-width: 100%;
     margin-top: 16px;
     display: flex;
