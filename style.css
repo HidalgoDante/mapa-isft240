@@ -5,11 +5,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: #f0f3f4; /* Fondo al estilo Google Maps */
+    background-color: #f0f3f4;
+    /* Fondo al estilo Google Maps */
 }
 
 #map {
@@ -19,7 +21,8 @@ html, body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: #e5e3df; /* Color típico de fondo de mapas */
+    background-color: #e5e3df;
+    /* Color típico de fondo de mapas */
 }
 
 .ui-container {
@@ -29,21 +32,25 @@ html, body {
     width: 100%;
     height: 100%;
     z-index: 1000;
-    pointer-events: none; /* Permitir que los clics pasen al mapa */
+    pointer-events: none;
+    /* Permitir que los clics pasen al mapa */
     display: flex;
     flex-direction: column;
     padding: 16px;
 }
 
 /* Solo los elementos de UI bloquean los clics */
-.search-panel, .route-info-card, .fab-creator, .creator-panel {
+.search-panel,
+.route-info-card,
+.fab-creator,
+.creator-panel {
     pointer-events: auto;
 }
 
 .search-panel {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 380px;
     max-width: 100%;
     display: flex;
@@ -131,12 +138,13 @@ html, body {
 .route-info-card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 380px;
     max-width: 100%;
     margin-top: 16px;
     padding: 16px;
-    display: none; /* Controlado por JS */
+    display: none;
+    /* Controlado por JS */
 }
 
 .route-header {
@@ -146,7 +154,8 @@ html, body {
 }
 
 .route-icon {
-    color: #1a73e8; /* Azul Google */
+    color: #1a73e8;
+    /* Azul Google */
     font-size: 24px;
 }
 
@@ -159,7 +168,8 @@ html, body {
 }
 
 .route-time {
-    color: #188038; /* Verde para tiempo */
+    color: #188038;
+    /* Verde para tiempo */
     font-size: 20px;
     font-weight: 500;
 }
@@ -205,7 +215,7 @@ html, body {
     background-color: white;
     color: #5f6368;
     border: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -230,7 +240,7 @@ html, body {
     background: white;
     border-radius: 8px;
     padding: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 250px;
     z-index: 1000;
 }
@@ -277,13 +287,14 @@ html, body {
     /* Modificado para que el ancla sea la parte inferior, simulando un pin */
     transform: translate(-50%, -100%) scale(var(--icon-scale, 1));
     transition: transform 0.12s ease-out;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Sombra al pin */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    /* Sombra al pin */
 }
 
 /* Popups personalizados estilo Google Maps */
 .custom-google-popup .leaflet-popup-content-wrapper {
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     padding: 2px;
 }
 
@@ -295,13 +306,13 @@ html, body {
 }
 
 .custom-google-popup .leaflet-popup-tip {
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Sobrescribir estilos por defecto de Leaflet */
 .leaflet-control-zoom {
     border: none !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
     border-radius: 4px !important;
     overflow: hidden;
 }
@@ -315,36 +326,12 @@ html, body {
     background-color: #f1f3f4 !important;
 }
 
-/* Responsividad para móviles */
-@media (max-width: 600px) {
-    .ui-container {
-        padding: 8px;
-    }
-    
-    .search-panel, .route-info-card, .place-info-panel {
-        width: 100%;
-        border-radius: 8px;
-    }
-    
-    .search-header {
-        padding: 10px 12px;
-    }
-    
-    .leaflet-control-zoom {
-        display: none; /* Ocultar controles de zoom en móvil (los gestos bastan) */
-    }
-    
-    .fab-creator {
-        bottom: 16px;
-        right: 16px;
-    }
-}
 
 /* Panel de Información del Lugar (Google Maps style) */
 .place-info-panel {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     width: 380px;
     max-width: 100%;
     margin-top: 16px;
@@ -372,7 +359,7 @@ html, body {
     position: absolute;
     top: 12px;
     right: 12px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     border-radius: 50%;
@@ -386,7 +373,7 @@ html, body {
 }
 
 .close-place:hover {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .place-content {
@@ -424,7 +411,7 @@ html, body {
 
 .btn-directions:hover {
     background: #1557b0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .route-details-inline {
@@ -465,13 +452,14 @@ html, body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
     border-radius: 50%;
     width: 36px;
     height: 36px;
-    display: none; /* Inicialmente ocultos */
+    display: none;
+    /* Inicialmente ocultos */
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -480,7 +468,7 @@ html, body {
 }
 
 .carousel-btn:hover {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .prev-btn {
@@ -496,7 +484,8 @@ html, body {
     bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
-    display: none; /* Inicialmente ocultos */
+    display: none;
+    /* Inicialmente ocultos */
     gap: 6px;
     z-index: 10;
 }
@@ -504,7 +493,7 @@ html, body {
 .carousel-dots .dot {
     width: 8px;
     height: 8px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.2s;
@@ -512,4 +501,72 @@ html, body {
 
 .carousel-dots .dot.active {
     background: white;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 600px) {
+    .ui-container {
+        padding: 8px;
+    }
+
+    .search-panel,
+    .route-info-card,
+    .place-info-panel {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .search-header {
+        padding: 10px 12px;
+    }
+
+    .leaflet-control-zoom {
+        display: none;
+        /* Ocultar controles de zoom en móvil (los gestos bastan) */
+    }
+
+    .fab-creator {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .place-image-container {
+        height: 70px;
+    }
+
+    .place-content {
+        padding: 8px 10px;
+    }
+
+    #place-title {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    #place-desc {
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .route-details-inline {
+        padding: 6px 10px;
+        margin-top: 6px;
+    }
+
+    .route-stats {
+        margin-left: 8px;
+        gap: 6px;
+    }
+
+    .route-stats .route-time {
+        font-size: 14px;
+    }
+
+    .route-stats .route-distance {
+        font-size: 12px;
+    }
+
+    .route-details-inline .route-icon {
+        font-size: 18px;
+    }
 }

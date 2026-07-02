@@ -85,13 +85,13 @@ const rutasPredefinidas = {
 const lugaresDataInfo = {
     'banos': { title: 'Baños', desc: 'Sanitarios públicos ubicados en el sector central.', images: ['img/baño1.jpeg'] },
     'aulas': { title: 'Aulas', desc: 'Sector principal de cursada.', images: ['img/aula40.jpeg', 'img/aula40-3.jpeg', 'img/aula40-2.jpeg'] },
-    'aulas2': { title: 'Aulas2', desc: 'Segundo sector de aulas.', images: ['img/aula2.jpeg', 'img/aula21.jpeg', 'img/aulta22.jpeg', 'img/aulta23.jpeg',] },
-    'aulas3': { title: 'Aulas3', desc: 'Tercer sector de aulas.', images: ['img/aula.png'] },
-    'seguridad': { title: 'Seguridad', desc: 'Puesto de control y vigilancia.', images: ['img/oficina.png'] },
-    'secretaria': { title: 'Secretaría', desc: 'Atención al alumno e informes.', images: ['img/oficina.png'] },
-    'secretaria2': { title: 'Secretaría', desc: 'Atención al alumno e informes.', images: ['img/oficina.png'] },
-    'kiosco': { title: 'Kiosco', desc: 'Buffet, comidas y fotocopias.', images: ['img/kiosco.png'] },
-    'laboratorio': { title: 'Laboratorio', desc: 'Prácticas y ciencias.', images: ['img/aula.png'] } // Placeholder img
+    'aulas2': { title: 'Laboratorio', desc: 'Segundo sector de aulas.', images: ['img/aula2.jpeg', 'img/aula21.jpeg', 'img/aulta22.jpeg', 'img/aulta23.jpeg',] },
+    'aulas3': { title: 'Aulas', desc: 'Tercer sector de aulas.', images: ['img/aula3.jpeg'] },
+    'seguridad': { title: 'Seguridad', desc: 'Puesto de control y vigilancia.', images: ['img/seguridad.jpeg'] },
+    'secretaria': { title: 'ISFT n°240', desc: 'Atención al alumno e informes.', images: ['img/n240.jpg'] },
+    'secretaria2': { title: 'CFL 407', desc: 'Atención al alumno e informes.', images: ['img/cfl-407.jpg'] },
+    'kiosco': { title: 'Kiosco', desc: 'Buffet, comidas y fotocopias.', images: ['img/kiosco-foto.jpg'] },
+    'laboratorio': { title: 'Laboratorio', desc: 'Prácticas y ciencias.', images: ['img/aula2.jpeg'] } // Placeholder img
 };
 
 let destinoActualId = null;
@@ -133,8 +133,8 @@ window.mostrarInfoLugar = function (destinoId) {
         }).addTo(map);
 
         // Ajustar vista
-        map.fitBounds(rutaActualLayer.getBounds(), { padding: [50, 50], paddingTopLeft: [400, 50] });
-
+        //map.fitBounds(rutaActualLayer.getBounds(), { padding: [50, 50], paddingTopLeft: [400, 50] }); ANTERIOR
+        map.fitBounds(rutaActualLayer.getBounds(), { padding: [25, 25], paddingTopLeft: [200, 25] });
         // Calcular distancia y tiempo
         const distanciaMetros = Math.round(calcularDistanciaRuta(ruta));
         const tiempoSegundos = distanciaMetros / VELOCIDAD_CAMINANDO_MPS;
