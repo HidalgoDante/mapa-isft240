@@ -24,30 +24,15 @@ El proyecto fue desarrollado como una solución para mejorar la orientación den
 
 ## 📂 Estructura del proyecto
 
-```
-/
-├── index.html
-├── script.js
-├── style.css
-├── img/
-├── capturas/
-└── README.md
-```
+Proyecto web estático con HTML, CSS y JavaScript.
 
 ## 🚀 Cómo ejecutar el proyecto
 
+Abrir el archivo `index.html` directamente en el navegador.
+
 ## 🌐 Demo
-https://tu-link.com
 
-1. Clonar el repositorio.
-
-```bash
-git clone https://github.com/tuusuario/mapa-interactivo.git
-```
-
-2. Abrir el archivo `index.html` en el navegador.
-
-No requiere instalación ni dependencias adicionales.
+https://hidalgodante.github.io/mapa-isft240/
 
 ## 📸 Capturas
 
@@ -65,9 +50,9 @@ No requiere instalación ni dependencias adicionales.
 
 ## 👨‍💻 Autores
 
-**Dante Sebastián Hidalgo**
-**Fernando Buiani
+- Dante Sebastián Hidalgo
+- Fernando Buiani
 
 Estudiante de Tecnicatura Superior en Análisis de Sistemas.
 
-Actualmente buscando mi primera oportunidad profesional en el área IT.
+Actualmente en búsqueda de mi primera oportunidad profesional en el área IT.
