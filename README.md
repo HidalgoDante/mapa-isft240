@@ -27,13 +27,17 @@ El proyecto fue desarrollado como una solución para mejorar la orientación den
 ```
 /
 ├── index.html
-├── css/
-├── js/
+├── script.js
+├── style.css
 ├── img/
+├── capturas/
 └── README.md
 ```
 
 ## 🚀 Cómo ejecutar el proyecto
+
+## 🌐 Demo
+https://tu-link.com
 
 1. Clonar el repositorio.
 
@@ -49,19 +53,20 @@ No requiere instalación ni dependencias adicionales.
 
 ### Página principal
 
-![Mapa](capturas/captura1.jpg)
+![Principal](capturas/captura1.jpg)
 
-### Vista del mapa
+### Menu
 
-*(Agregar captura aquí)*
+![Menu](capturas/captura2.jpg)
 
 ### Navegación
 
-*(Agregar captura aquí)*
+![Rutas](capturas/captura3.jpg)
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 **Dante Sebastián Hidalgo**
+**Fernando Buiani
 
 Estudiante de Tecnicatura Superior en Análisis de Sistemas.
 
