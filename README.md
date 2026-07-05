@@ -49,7 +49,7 @@ No requiere instalación ni dependencias adicionales.
 
 ### Página principal
 
-*(Agregar captura aquí)*
+![Mapa](capturas/captura1.jpg)
 
 ### Vista del mapa
 
